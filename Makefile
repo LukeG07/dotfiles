@@ -1,9 +1,9 @@
 .PHONY: clean link
 
 link: clean
-	ln -s ~/dotfiles/nvim ~/.config/nvim
-	ln -s ~/dotfiles/.wezterm.lua ~/.wezterm.lua
+	ln -s ${PWD}/nvim ~/.config/
+	ln -s ${PWD}/wezterm.lua ~/.wezterm.lua
 
 clean:
-	rm -f ~/.config/nvim
+	rm -rf ~/.config/nvim
 	rm -f ~/.wezterm.lua
