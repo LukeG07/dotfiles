@@ -2,7 +2,7 @@
 
 link: clean
 	ln -s ${PWD}/nvim ~/.config/
-	ln -s ${PWD}/wezterm.lua ~/.wezterm.lua
+	ln -s ${PWD}/.wezterm.lua ~/.wezterm.lua
 
 clean:
 	rm -rf ~/.config/nvim
