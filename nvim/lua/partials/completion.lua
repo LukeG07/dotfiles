@@ -12,7 +12,7 @@ function module.config()
 		formatting = {
 			format = function(entry, vim_item)
 				vim_item.menu = ({
-					--  copilot = "[Copilot]",
+					copilot = "[Copilot]",
 					--  buffer = "[Buffer]",
 					nvim_lsp = "[LSP]",
 					--  luasnip = "[LuaSnip]",

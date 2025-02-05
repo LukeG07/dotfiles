@@ -52,4 +52,15 @@ return {
 		init = require("partials/formatter").init,
 		config = require("partials/formatter").config,
 	},
+	{
+		"github/copilot.vim",
+		ft = { "go", "rust", "zig", "cpp", "typescript" },
+		config = function()
+			vim.keymap.set("i", "<C-f>", 'copilot#Accept("\\<CR>")', {
+				expr = true,
+				replace_keycodes = false,
+			})
+			vim.g.copilot_no_tab_map = true
+		end,
+	},
 }
