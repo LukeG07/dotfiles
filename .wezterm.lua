@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 config.color_scheme = 'Gruvbox dark, soft (base16)'
-config.leader = { key = 'l', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = 'q', mods = 'CTRL', timeout_milliseconds = 1000 }
 config.keys = {
   -- This will create a new split and run your default program inside it
   {
