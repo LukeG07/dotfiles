@@ -63,4 +63,20 @@ return {
 			vim.g.copilot_no_tab_map = true
 		end,
 	},
+	{
+		"vim-test/vim-test",
+		ft = { "go", "rust", "zig", "cpp" },
+		init = function()
+			vim.api.nvim_set_keymap("n", "<leader>tt", ":TestNearest<cr>", {})
+			vim.api.nvim_set_keymap("n", "<leader>tp", ":TestFile<cr>", {})
+			vim.api.nvim_set_keymap("n", "<leader>ta", ":TestSuite<cr>", {})
+			vim.api.nvim_exec(
+				[[
+                    let test#strategy = "neovim"
+                    let test#neovim#start_normal = 1
+                 ]],
+				false
+			)
+		end,
+	},
 }
