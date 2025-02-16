@@ -87,7 +87,7 @@ capabilities.offsetEncoding = { "utf-8" }
 local get_current_gomod = function()
 	local file = io.open("go.mod", "r")
 	if file == nil then
-		return nils
+		return nil
 	end
 
 	local first_line = file:read()
@@ -132,9 +132,15 @@ local settings_overrides = {
 	},
 }
 
+local filetypes_overrides = {
+	clangd = { "c", "cpp", "objc", "objcpp" },
+}
+
 local servers = {
 	"gopls",
 	"lua_ls",
+	"ts_ls",
+	"clangd",
 }
 
 local nvim_lsp = require("lspconfig")
@@ -153,6 +159,10 @@ for _, lsp in ipairs(servers) do
 		},
 		settings = settings,
 	}
+
+	if filetypes_overrides[lsp] then
+		setup.filetypes = filetypes_overrides[lsp]
+	end
 
 	nvim_lsp[lsp].setup(setup)
 end

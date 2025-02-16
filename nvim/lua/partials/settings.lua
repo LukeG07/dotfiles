@@ -10,3 +10,5 @@ vim.api.nvim_exec(
     ]],
 	false
 )
+
+vim.g.copilot_node_command = "~/.nvm/versions/node/v20.12.2/bin/node"
