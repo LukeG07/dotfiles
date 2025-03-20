@@ -13,6 +13,8 @@ function module.config()
 		filetype = {
 			lua = { require("formatter.filetypes.lua").stylua },
 			go = { require("formatter.filetypes.go").goimports },
+			c = { require("formatter.filetypes.c").clangformat },
+			cpp = { require("formatter.filetypes.cpp").clangformat },
 			graphql = { require("formatter.filetypes.graphql").prettier },
 			proto = { require("formatter.filetypes.proto").buf_format },
 			terraform = { require("formatter.filetypes.terraform").terraformfmt },
