@@ -31,6 +31,7 @@ function module.config()
 			typescript = { require("formatter.filetypes.typescript").prettier },
 			javascriptreact = { require("formatter.filetypes.javascript").prettier },
 			typescriptreact = { require("formatter.filetypes.typescript").prettier },
+			html = { require("formatter.filetypes.html").prettier },
 		},
 	})
 end

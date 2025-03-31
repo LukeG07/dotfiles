@@ -56,7 +56,7 @@ return {
 	},
 	{
 		"github/copilot.vim",
-		ft = { "go", "rust", "zig", "cpp", "typescript" },
+		ft = { "go", "rust", "zig", "cpp", "typescript", "proto" },
 		config = function()
 			vim.keymap.set("i", "<C-f>", 'copilot#Accept("\\<CR>")', {
 				expr = true,
