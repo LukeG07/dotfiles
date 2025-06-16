@@ -56,7 +56,7 @@ return {
 	},
 	{
 		"github/copilot.vim",
-		ft = { "go", "rust", "zig", "cpp", "typescript", "proto" },
+		ft = { "go", "rust", "zig", "cpp", "typescript", "proto", "python" },
 		config = function()
 			vim.keymap.set("i", "<C-f>", 'copilot#Accept("\\<CR>")', {
 				expr = true,
@@ -64,6 +64,19 @@ return {
 			})
 			vim.g.copilot_no_tab_map = true
 		end,
+	},
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		dependencies = {
+			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+		},
+		event = { "VeryLazy" },
+		build = "make tiktoken", -- Only on MacOS or Linux
+		opts = {
+			-- See Configuration section for options
+		},
+		-- See Commands section for default commands if you want to lazy load on them
 	},
 	{
 		"vim-test/vim-test",
@@ -80,6 +93,13 @@ return {
 				false
 			)
 		end,
+	},
+	{
+		"jbyuki/instant.nvim",
+		init = function()
+			vim.g.instant_username = "LukusPlucus"
+		end,
+		event = { "VeryLazy" },
 	},
 	--{
 	--	"mfussenegger/nvim-dap",
