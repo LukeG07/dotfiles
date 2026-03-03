@@ -17,6 +17,11 @@ config.keys = {
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 	{
+		key = "|",
+		mods = "LEADER",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
 		key = "x",
 		mods = "LEADER",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
@@ -24,12 +29,12 @@ config.keys = {
 	{
 		key = "l",
 		mods = "CTRL|SHIFT",
-		action = act.ActivatePaneDirection("Left"),
+		action = act.ActivatePaneDirection("Right"),
 	},
 	{
 		key = "h",
 		mods = "CTRL|SHIFT",
-		action = act.ActivatePaneDirection("Right"),
+		action = act.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "k",

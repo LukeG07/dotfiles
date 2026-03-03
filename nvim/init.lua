@@ -26,4 +26,5 @@ require("lazy").setup("partials/plugins", {
 	change_detection = { enabled = false },
 })
 
+require("partials/lsp")
 require("partials/settings")

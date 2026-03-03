@@ -132,4 +132,4 @@ vim.api.nvim_exec(
 	false
 )
 
-vim.g.copilot_node_command = "~/.nvm/versions/node/v20.12.2/bin/node"
+vim.g.copilot_node_command = "~/.nvm/versions/node/v22.21.1/bin/node"

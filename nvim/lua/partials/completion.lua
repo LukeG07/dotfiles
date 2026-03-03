@@ -59,6 +59,7 @@ function module.config()
 			end, { "i", "s" }),
 		},
 		sources = cmp.config.sources({
+			{ name = "copilot" },
 			{ name = "vsnip" },
 			{ name = "nvim_lsp" },
 			{ name = "path" },
