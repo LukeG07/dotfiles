@@ -12,7 +12,6 @@ function module.config()
 		formatting = {
 			format = function(entry, vim_item)
 				vim_item.menu = ({
-					copilot = "[Copilot]",
 					--  buffer = "[Buffer]",
 					nvim_lsp = "[LSP]",
 					--  luasnip = "[LuaSnip]",
@@ -59,7 +58,6 @@ function module.config()
 			end, { "i", "s" }),
 		},
 		sources = cmp.config.sources({
-			{ name = "copilot" },
 			{ name = "vsnip" },
 			{ name = "nvim_lsp" },
 			{ name = "path" },

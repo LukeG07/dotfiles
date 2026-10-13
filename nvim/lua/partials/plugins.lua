@@ -51,41 +51,6 @@ return {
 		init = require("partials/formatter").init,
 		config = require("partials/formatter").config,
 	},
-	--{
-	--	"github/copilot.vim",
-	--	ft = { "go", "rust", "zig", "cpp", "typescript", "proto", "python" },
-	--	config = function()
-	--		vim.keymap.set("i", "<C-f>", 'copilot#Accept("\\<CR>")', {
-	--			expr = true,
-	--			replace_keycodes = false,
-	--		})
-	--		vim.g.copilot_no_tab_map = true
-	--	end,
-	--},
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		dependencies = {
-			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-		},
-		event = { "VeryLazy" },
-		build = "make tiktoken", -- Only on MacOS or Linux
-		opts = {
-			-- See Configuration section for options
-		},
-		-- See Commands section for default commands if you want to lazy load on them
-	},
-	{
-		"zbirenbaum/copilot.lua",
-		requires = {
-			"copilotlsp-nvim/copilot-lsp", -- (optional) for NES functionality
-		},
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({})
-		end,
-	},
 	{
 		"vim-test/vim-test",
 		ft = { "go", "rust", "zig", "cpp" },
